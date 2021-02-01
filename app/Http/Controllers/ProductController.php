@@ -43,7 +43,7 @@ class ProductController extends Controller
 
         $directoryPath = '/assets/uploads/';
         
-        if($request->image){
+        if(isset($request->image)){
             $file_code = explode(',', $request['image']);
             $decode = base64_decode($file_code[1]);
              $extension =  $file_code[0];
